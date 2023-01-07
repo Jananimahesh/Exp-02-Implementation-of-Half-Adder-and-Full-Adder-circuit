@@ -38,17 +38,49 @@ If the output is 1, then the led glows.
 Program:
 /*
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: janani.m
+RegisterNumber: 22006734
+HALF ADDAR
+module halfaddar(A,B,sum,carry);
+input A,B;
+output sum,carry;
+xor(sum,A,B);
+and(carry,A,B);
+endmodule
+FULL ADDAR
+module fulladdar(A,B,C,sum,carry);
+input A,B,C;
+output sum,carry;
+assign sum = ((A^B)^C);
+assign carry = ((A&B)|(B&C)|(C&A));
+endmodule
 */
 Logic symbol & Truthtable
 RTL realization
 
 ### Output:
 ### RTL
+ RTL realization for Half Addar
+ ![Screenshot (9)](https://user-images.githubusercontent.com/119432417/211161114-9b72f368-827f-422b-a0b3-102b2bda337c.png)
+ RTL realization for Full Addar
+ ![Screenshot (10)](https://user-images.githubusercontent.com/119432417/211161645-8defa436-fbad-4ece-9dc6-ffb887cb4ee4.png)
+
+
 ### TIMING DIAGRAM
+The timing diagram for Half Addar
+![image](https://user-images.githubusercontent.com/119432417/211162222-8bc2eaf6-80c0-4f4c-9b4c-208a63442d31.png)
+The timing diagram for Full Addar
+
+![image](https://user-images.githubusercontent.com/119432417/211162314-b1110ea8-5702-4968-a94e-c6d2d7f5fd66.png)
+
 
 
 ### TRUTH TABLE 
+THE TRUTH TABLE FOR HALF ADDAR
+![image](https://user-images.githubusercontent.com/119432417/211161796-be6d8c6e-7a68-4e4e-9db6-730bee496ae3.png)
+THE TRUTH TABLE FOR HALF ADDAR
+![image](https://user-images.githubusercontent.com/119432417/211161845-d284b1b8-a597-4dcb-882e-97355cb6a7bd.png)
+
 
 ### Result:
+Thus the Half Addar and Full Addar circuit was succesfully implemented
